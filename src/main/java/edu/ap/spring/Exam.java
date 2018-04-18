@@ -90,7 +90,12 @@ public class Exam {
 	// zijn aan twee
 	// 2 punten
 	public String getXOverTwo(List<Point> points) {
-		String 
-		
+		String output = points.stream()
+						.map(p -> (int)p.getX())
+						.filter(x -> x >= 2)
+						.map(p -> p.toString())
+						.collect(Collectors.joining(","));
+						;
+		return output;
 	}
 }
