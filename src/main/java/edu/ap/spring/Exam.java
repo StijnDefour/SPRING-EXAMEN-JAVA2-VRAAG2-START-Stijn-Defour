@@ -71,7 +71,6 @@ public class Exam {
 		if (Character.isUpperCase(string.charAt(0))) {
 			return false;
 		} else {
-			System.out.println(string.charAt(0));
 			return true;
 		}
 	}
@@ -81,10 +80,9 @@ public class Exam {
 	// 1 punt
 	public int sumOfX(List<Point> points) {
 		int sum = points.stream()
-					.mapToInt(Point::getX)
-					//.map(p -> p.getX())
-					.sum());
-		
+					.map(p -> (int)p.getX())
+					.reduce(0, (a,b) -> a + b);
+		return sum;
 	}
 	
 	// Maak gebruik van lambdas en streams om een comma-separated
@@ -92,6 +90,7 @@ public class Exam {
 	// zijn aan twee
 	// 2 punten
 	public String getXOverTwo(List<Point> points) {
-		return "test";
+		String 
+		
 	}
 }
