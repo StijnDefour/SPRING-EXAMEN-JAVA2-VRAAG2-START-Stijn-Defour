@@ -15,10 +15,7 @@ public class Exam {
 	public int[] getPrimes(int[] numbers) {
 		
 		List<Integer> intList = new ArrayList<Integer>();
-		for (int i : numbers)
-		{
-		    intList.add(i);
-		}
+		for (int i : numbers) { intList.add(i); }
 
 		List<Integer> intListPrimes = intList.stream()
 										.filter(Exam::isPrime)
@@ -27,8 +24,7 @@ public class Exam {
 		int[] nummers = new int[intListPrimes.size()];
 		for(int i = 0;i < nummers.length;i++) {
 			nummers[i] = intListPrimes.get(i);
-		}
-		  
+		} 
         return nummers;
 	}
 	
